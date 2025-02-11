@@ -1,5 +1,7 @@
 fn summation(n: i32) -> i32 {
     n * (n + 1) / 2
+    // INFO: cool variation
+    // (1..=n).sum()
 }
 
 fn main() {
