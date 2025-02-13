@@ -14,10 +14,19 @@
 // }
 
 // A better, more idiomatic version
+// fn are_you_playing_banjo(name: &str) -> String {
+//     match &name[0..1] {
+//         "R" | "r" => format!("{} plays banjo", name),
+//         _ => format!("{} does not play banjo", name),
+//     }
+// }
+
+// Safest and reasonably fast version
 fn are_you_playing_banjo(name: &str) -> String {
-    match &name[0..1] {
-        "R" | "r" => format!("{} plays banjo", name),
-        _ => format!("{} does not play banjo", name),
+    match name.chars().next() {
+        Some(c) if c.eq_ignore_ascii_case(&'r') => format!("{} plays banjo", name),
+        Some(_) => format!("{} does not play banjo", name),
+        None => String::from("Name cannot be empty"),
     }
 }
 
