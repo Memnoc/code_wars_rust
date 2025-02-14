@@ -32,6 +32,28 @@ fn minimum(arr: &[i32]) -> Option<i32> {
     Some(min_num)
 }
 
+// NOTE: maybe a better solution that uses tuples
+
+fn min_max(arr: &[i32]) -> Option<(i32, i32)> {
+    if arr.is_empty() {
+        return None;
+    }
+
+    let mut min = arr[0];
+    let mut max = arr[0];
+
+    for &num in arr {
+        if num < min {
+            min = num;
+        }
+        if num > max {
+            max = num;
+        }
+    }
+
+    Some((min, max))
+}
+
 fn main() {
     println!("=== Max and Min ===");
 }
