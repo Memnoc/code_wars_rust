@@ -33,7 +33,6 @@ fn minimum(arr: &[i32]) -> Option<i32> {
 }
 
 // NOTE: maybe a better solution that uses tuples
-
 fn min_max(arr: &[i32]) -> Option<(i32, i32)> {
     if arr.is_empty() {
         return None;
@@ -52,6 +51,15 @@ fn min_max(arr: &[i32]) -> Option<(i32, i32)> {
     }
 
     Some((min, max))
+}
+
+// NOTE: a very idiomatic approach and super short
+fn code_wars_minimum(arr: &[i32]) -> i32 {
+    *arr.iter().min().unwrap()
+}
+
+fn code_wars_maximum(arr: &[i32]) -> i32 {
+    *arr.iter().max().unwrap()
 }
 
 fn main() {
