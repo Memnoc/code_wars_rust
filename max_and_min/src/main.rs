@@ -4,6 +4,8 @@
 // [42, 54, 65, 87, 0]             -> min = 0, max = 87
 // [5]
 
+// NOTE: good, readable and performant but somewhat redundant in some parts
+// like not using tuples
 fn maximum(arr: &[i32]) -> Option<i32> {
     if arr.is_empty() {
         return None;
@@ -32,7 +34,7 @@ fn minimum(arr: &[i32]) -> Option<i32> {
     Some(min_num)
 }
 
-// NOTE: maybe a better solution that uses tuples
+// NOTE: The best!
 fn min_max(arr: &[i32]) -> Option<(i32, i32)> {
     if arr.is_empty() {
         return None;
@@ -54,6 +56,7 @@ fn min_max(arr: &[i32]) -> Option<(i32, i32)> {
 }
 
 // NOTE: a very idiomatic approach and super short
+// not too good
 fn code_wars_minimum(arr: &[i32]) -> i32 {
     *arr.iter().min().unwrap()
 }
@@ -62,7 +65,7 @@ fn code_wars_maximum(arr: &[i32]) -> i32 {
     *arr.iter().max().unwrap()
 }
 
-// NOTE: best approach IMO
+// NOTE: best idtiomatic approach IMO
 fn idiomatic_minimum(arr: &[i32]) -> i32 {
     match arr.iter().min() {
         Some(&min) => min,
