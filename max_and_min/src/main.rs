@@ -62,6 +62,21 @@ fn code_wars_maximum(arr: &[i32]) -> i32 {
     *arr.iter().max().unwrap()
 }
 
+// NOTE: best approach IMO
+fn idiomatic_minimum(arr: &[i32]) -> i32 {
+    match arr.iter().min() {
+        Some(&min) => min,
+        None => 0,
+    }
+}
+
+fn idiomatic_maximum(arr: &[i32]) -> i32 {
+    match arr.iter().max() {
+        Some(&max) => max,
+        None => 0,
+    }
+}
+
 fn main() {
     println!("=== Max and Min ===");
 }
