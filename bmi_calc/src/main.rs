@@ -1,3 +1,4 @@
+// NOTE: we are skipping this one for now
 fn main() {
-    println!("Hello, world!");
+    println!("=== BMI Calculator ===");
 }
