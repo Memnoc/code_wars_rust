@@ -2,8 +2,7 @@
 // all the exclamation marks from a given string
 fn remove_exclamation_marks(input: &str) -> String {
     let input_string: String = input.to_string();
-    let cleaned_string = input_string.chars().filter(|&c| c != '!').collect();
-    cleaned_string
+    input_string.chars().filter(|&c| c != '!').collect()
 }
 fn main() {
     println!("=== Remove Exclamation Marks ===");
