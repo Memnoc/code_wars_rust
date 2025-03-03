@@ -10,6 +10,23 @@ fn high_and_low(numbers: &str) -> String {
     format!("{} {}", max, min)
 }
 
+// NOTE: shorter, but not necessarily better solution
+fn alternative_high_and_low(numbers: &str) -> String {
+    format!(
+        "{} {}",
+        numbers
+            .split_whitespace()
+            .map(|s| s.parse::<i64>().unwrap())
+            .max()
+            .unwrap(),
+        numbers
+            .split_whitespace()
+            .map(|s| s.parse::<i64>().unwrap())
+            .min()
+            .unwrap()
+    )
+}
+
 // NOTE: given a string of space separated numbers,
 // return the highest and lowest number.
 fn main() {
