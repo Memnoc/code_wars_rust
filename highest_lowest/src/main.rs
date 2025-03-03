@@ -14,9 +14,9 @@ fn high_and_low(numbers: &str) -> String {
 // return the highest and lowest number.
 fn main() {
     println!("=== Highest and Lowest ===");
-    high_and_low("1 2 3 4 5");
-    high_and_low("1 2 -3 4 5");
-    high_and_low("1 9 3 4 -5");
+    println!("{:?}", high_and_low("1 2 3 4 5"));
+    println!("{:?}", high_and_low("1 2 -3 4 5"));
+    println!("{:?}", high_and_low("1 9 3 4 -5"));
 }
 
 #[cfg(test)]
