@@ -1,8 +1,19 @@
+// HEADER: My solution
 fn number(bus_stops: &[(i32, i32)]) -> i32 {
     let people_on: i32 = bus_stops.iter().map(|&(on, _)| on).sum();
     let people_off: i32 = bus_stops.iter().map(|&(_, off)| off).sum();
 
     people_on - people_off
+}
+
+// NOTE: this is brilliant code
+fn number_alternative_one(bus_stops: &[(i32, i32)]) -> i32 {
+    bus_stops.iter().map(|(a, b)| a - b).sum()
+}
+
+// NOTE: another fantastic soltion
+fn number_alternative_two(bus_stops: &[(i32, i32)]) -> i32 {
+    bus_stops.iter().fold(0, |acc, x| acc + x.0 - x.1)
 }
 
 // INFO: There is a bus moving in the city which takes and drops some people at each bus stop.
