@@ -6,7 +6,6 @@ fn main() {
 }
 
 #[cfg(test)]
-#[cfg(test)]
 mod tests {
     use super::points;
 
