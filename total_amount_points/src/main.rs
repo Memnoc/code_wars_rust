@@ -1,6 +1,28 @@
 fn points(games: &[String]) -> u32 {
+    // convert string to tuple
+    // validation
+    // sum and return the results
     todo!()
 }
+
+// NOTE: Our football team has finished the championship.
+// Our team's match results are recorded in a collection of strings.
+// Each match is represented by a string in the format "x:y",
+// where x is our team's score and y is our opponents score.
+// For example: ["3:1", "2:2", "0:1", ...]
+
+// NOTE: Points are awarded for each match as follows:
+
+// if x > y: 3 points (win)
+// if x < y: 0 points (loss)
+// if x = y: 1 point (tie)
+
+// HEADER: We need to write a function that takes this collection and returns
+// the number of points our team (x) got in the championship by the rules given above.
+// *************************
+// The easiest way here would be to convert the string to a tuple and
+// then sum the values - before performing the sum, the validation rules
+// can be applied
 fn main() {
     println!("=== Total Amount of Points ===");
 }
