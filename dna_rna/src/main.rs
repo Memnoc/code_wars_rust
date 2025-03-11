@@ -1,9 +1,14 @@
 fn dna_to_rna(dna: &str) -> String {
-    todo!()
+    dna.replace("T", "U")
 }
 
+// TODO: Create a function that converts DNA to RNA.
+// The lenght is arbitrary, the string can be empty.
 fn main() {
     println!("=== DNA to RNA conversion ===");
+    let conversion_one = "GCAT";
+    let result_one = dna_to_rna(conversion_one);
+    println!("Converted string is: {} ", result_one);
 }
 
 #[cfg(test)]
@@ -12,6 +17,8 @@ mod test {
 
     #[test]
     fn test_dna_to_rna() {
-        todo!();
+        assert_eq!(dna_to_rna("GCAT"), "GCAU");
+        assert_eq!(dna_to_rna("TTTT"), "UUUU");
+        assert_eq!(dna_to_rna(""), "");
     }
 }
