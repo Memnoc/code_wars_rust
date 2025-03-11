@@ -1,5 +1,16 @@
+// HEADER: My solution
 fn dna_to_rna(dna: &str) -> String {
     dna.replace("T", "U")
+}
+
+// HEADER: kind of like this more verbose approach
+fn alternate_dna_to_rna(dna: &str) -> String {
+    dna.chars()
+        .map(|x| match x {
+            'T' => 'U',
+            _ => x,
+        })
+        .collect()
 }
 
 // TODO: Create a function that converts DNA to RNA.
