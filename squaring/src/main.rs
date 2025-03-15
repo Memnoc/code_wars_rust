@@ -1,6 +1,7 @@
 // HEADER: my simple solution
 fn square(number: i32) -> i32 {
     number * number
+    // number.pow(2) // also valid
 }
 
 // TODO: write a function that takes
