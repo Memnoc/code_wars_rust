@@ -1,3 +1,4 @@
+// HEADER: my solution passing the tests
 fn find_smallest_int(arr: &[i32]) -> i32 {
     *arr.iter().min().unwrap_or(&i32::MAX)
 }
