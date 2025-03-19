@@ -1,13 +1,8 @@
 // HEADER: my solution
 fn two_sort(arr: &[&str]) -> String {
-    // let result = arr
-    //     .iter()
-    //     .map(|&s| s.to_uppercase())
-    //     .collect::<Vec<String>>()
-    //     .join(" ");
-    let result = arr.join(" ");
-    println!("{}", result);
-    result
+    let mut sorted = arr.to_vec();
+    sorted.sort();
+    sorted.join(" ")
 }
 // NOTE: sort alphabetically a list of strings
 // case-sensitive and based on the ASCII value of the chars
@@ -21,7 +16,7 @@ fn main() {
         "bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps",
     ];
 
-    two_sort(test_list);
+    println!("{}", two_sort(test_list));
 }
 
 #[cfg(test)]
