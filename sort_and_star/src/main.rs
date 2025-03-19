@@ -1,6 +1,13 @@
 // HEADER: my solution
 fn two_sort(arr: &[&str]) -> String {
-    todo!()
+    // let result = arr
+    //     .iter()
+    //     .map(|&s| s.to_uppercase())
+    //     .collect::<Vec<String>>()
+    //     .join(" ");
+    let result = arr.join(" ");
+    println!("{}", result);
+    result
 }
 // NOTE: sort alphabetically a list of strings
 // case-sensitive and based on the ASCII value of the chars
@@ -9,6 +16,12 @@ fn two_sort(arr: &[&str]) -> String {
 // return must have *** between each letter
 fn main() {
     println!("=== Sort and Star ===");
+
+    let test_list = &[
+        "bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps",
+    ];
+
+    two_sort(test_list);
 }
 
 #[cfg(test)]
