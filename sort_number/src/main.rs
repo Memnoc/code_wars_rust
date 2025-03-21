@@ -1,6 +1,8 @@
 // HEADER: my solution
 fn sort_numbers(arr: &Vec<i32>) -> Vec<i32> {
-    todo!()
+    let mut sorted = arr.clone();
+    sorted.sort();
+    sorted
 }
 
 // TODO: write a function to sort an array of numbers
@@ -8,6 +10,7 @@ fn sort_numbers(arr: &Vec<i32>) -> Vec<i32> {
 // return an empty array
 fn main() {
     println!("Hello, world!");
+    sort_numbers(&vec![1, 2, 3, 10]);
 }
 
 #[cfg(test)]
